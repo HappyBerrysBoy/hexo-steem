@@ -47,8 +47,8 @@ function updateSteemArticles(username) {
             date,
             tags,
             author,
-            categories
-            // excerpt,
+            categories,
+            excerpt
           },
           true
         );
