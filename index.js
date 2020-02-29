@@ -1,7 +1,7 @@
 var steem = require("steem");
 
 function updateSteemArticles(username) {
-  steem.api.getDiscussionsByBlog({ limit: 10, tag: username }, function(
+  steem.api.getDiscussionsByBlog({ limit: 100, tag: username }, function(
     err,
     result
   ) {
@@ -33,7 +33,7 @@ function updateSteemArticles(username) {
 
         const categories = tags[0];
         const excerpt =
-          `<img src="images[0].replace(/\)/g, '')" />` +
+          `<img src="${images[0].replace(/\)/g, "")}" />` +
           cont.substring(0, 200) +
           ".....";
 
