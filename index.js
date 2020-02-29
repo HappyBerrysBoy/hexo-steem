@@ -33,8 +33,8 @@ function updateSteemArticles(username) {
 
         const categories = tags[0];
         const excerpt =
-          `<img src="${images[0].replace(/\)/g, "")}" />` +
-          cont.substring(0, 200) +
+          `<img src="${images[0].replace(/\)/g, "")}" />\r\n` +
+          cont.substring(0, 200).replace(/\r\n/g, " ") +
           ".....";
 
         let t = title.replace(/"(.*)"/g, "“$1”").replace(/"/g, "“"); //.replace(/\[|\]|:|-|#|\(|\)|\'/g, '').replace('?', '').replace('?', '');
